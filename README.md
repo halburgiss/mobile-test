@@ -1,4 +1,4 @@
 mobile-test
 ===========
 
-Testing Phonegap build
+Testing Phonegap build, just farting around with jQueryMobile and Phonegap
