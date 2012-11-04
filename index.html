@@ -291,7 +291,7 @@ NOTE: css must be referenced relative as done here for Phonegap Build.
 					$("#youtube").attr("src", "http://www.youtube.com/embed/lOAcCcRcbrc");
 				} 
 			});
-			$("#subnavSingle").remove();
+			$("#subnavSingle").remove(); //
 			$("#about-content a").click( function() {
 				$("body").html("");
 				eraseCookie( 'ss_mobile_theme' );
@@ -315,6 +315,8 @@ NOTE: css must be referenced relative as done here for Phonegap Build.
 				$.mobile.allowCrossDomainPages = true;
 				$.support.cors = true;
 				$.mobile.phonegapNavigationEnabled = true;
+
+				console.log( 'Device: ' + device );
 			 });
 			$(document).bind('pagebeforeshow',function(){
 				// hide the home button on home screen
@@ -345,8 +347,8 @@ NOTE: css must be referenced relative as done here for Phonegap Build.
 			app.isOnline = function() {
 
 
-return true;
-
+//return true;
+			try{ 
 				if ( ! navigator.onLine ) {
 					app.isonline = false;
 					return false;
@@ -363,6 +365,9 @@ return true;
 			}
 			// call one time to set it up.
 			app.isOnline();
+			} catch(e) {
+				alert("Error: " + e.message );
+			}
 
 			// this screen can take a REALLY long time to load on slower devices. Provide some UI stuff for slow users.
 			app.contactsStarted = false;
