@@ -348,8 +348,8 @@ NOTE: css must be referenced relative as done here for Phonegap Build.
 
 alert('isOnline');
 
-//return true;
-			try{ 
+return true;
+		try{ 
 				if ( ! navigator.onLine ) {
 					app.isonline = false;
 					return false;
@@ -366,9 +366,9 @@ alert('isOnline');
 			}
 			// call one time to set it up.
 			app.isOnline();
-			} catch(e) {
-				alert("Error: " + e.message );
-			}
+		} catch(e) {
+			alert("Error: " + e.message );
+		}
 
 			// this screen can take a REALLY long time to load on slower devices. Provide some UI stuff for slow users.
 			app.contactsStarted = false;
