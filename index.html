@@ -21,8 +21,7 @@ NOTE: css must be referenced relative as done here for Phonegap Build.
 		var app = {
 			'contacts':false,
 			'siteurl':'staging73.resultsbydesign.com', 
-			'build':'app',
-			'platform' : device.platform
+			'build':'app'
 			}; <!-- build = app or web -->
 		
 				</script>
@@ -315,7 +314,7 @@ NOTE: css must be referenced relative as done here for Phonegap Build.
 				// Make your jQuery Mobile framework configuration changes here!
 				$.mobile.allowCrossDomainPages = true;
 				$.support.cors = true;
-				$.mobile.phonegapNavigationEnabled = true
+				$.mobile.phonegapNavigationEnabled = true;
 			 });
 			$(document).bind('pagebeforeshow',function(){
 				// hide the home button on home screen
@@ -338,12 +337,16 @@ NOTE: css must be referenced relative as done here for Phonegap Build.
 			});
 
 			if ( app.build != 'app' ) { <!-- 'app' or 'web' -->
-			console.log( 'setting cookie' );
+			return; //FIXME
 				setTimeout(function(){setCookie('ss_mobile_theme','true',90);},3500);
 			}
 
 			// method to test online connectivity. We are not trusting the navigator object fully here.
 			app.isOnline = function() {
+
+
+return true;
+
 				if ( ! navigator.onLine ) {
 					app.isonline = false;
 					return false;
