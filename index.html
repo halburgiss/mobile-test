@@ -18,7 +18,7 @@ NOTE: css must be referenced relative as done here for Phonegap Build.
 				<script>
 		
 		'use strict';
-		var app = {'contacts':false,'siteurl':"staging73.resultsbydesign.com"};
+		var app = {'contacts':false,'siteurl':'staging73.resultsbydesign.com', 'build':'app' }; <!-- build = app or web -->
 		
 				</script>
 	</head>
@@ -216,7 +216,7 @@ NOTE: css must be referenced relative as done here for Phonegap Build.
 
 					app.marker = new google.maps.Marker({
 							position: app.map.center,
-							icon: '/ss_skin/mobile/images/workoffice.png',
+							icon: 'mobile/images/workoffice.png', <!-- app is different -->
 							draggable: true,
 							map: app.map,
 							title: 'Storage Solutions Location' });
@@ -332,7 +332,11 @@ NOTE: css must be referenced relative as done here for Phonegap Build.
 					return false;
 				});
 			});
-			setTimeout(function(){setCookie('ss_mobile_theme','true',90);},3500);
+
+			if ( app.build != 'app' ) { <!-- 'app' or 'web' -->
+				setTimeout(function(){setCookie('ss_mobile_theme','true',90);},3500);
+			}
+
 			// method to test online connectivity. We are not trusting the navigator object fully here.
 			app.isOnline = function() {
 				if ( ! navigator.onLine ) {
@@ -365,6 +369,6 @@ NOTE: css must be referenced relative as done here for Phonegap Build.
 		
 		</script>
 		<script src="http://maps.google.com/maps/api/js?v=3&sensor=true"></script>
-<!--		<script defer async src="http://staging73.resultsbydesign.com/includes/cookies.min.js"></script> -->
+		<script defer async src="includes/cookies.min.js"></script>
 	</body>
 </html><!-- DBS been here and gone -->
