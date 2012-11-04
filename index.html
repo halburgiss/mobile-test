@@ -18,7 +18,12 @@ NOTE: css must be referenced relative as done here for Phonegap Build.
 				<script>
 		
 		'use strict';
-		var app = {'contacts':false,'siteurl':'staging73.resultsbydesign.com', 'build':'app' }; <!-- build = app or web -->
+		var app = {
+			'contacts':false,
+			'siteurl':'staging73.resultsbydesign.com', 
+			'build':'app',
+			'platform' : device.platform
+			}; <!-- build = app or web -->
 		
 				</script>
 	</head>
