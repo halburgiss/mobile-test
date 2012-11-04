@@ -40,7 +40,7 @@ footer.ui-footer {
 	background: url('../mobile/images/bg-stripes.png') repeat;
 }
 
-	footer #mobile-switch {
+	footer .mobile-switch {
 		float:right;
 		margin-right:2em;
 		display:none;

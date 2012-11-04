@@ -306,7 +306,8 @@ NOTE: css must be referenced relative as done here for Phonegap Build.
 			</div>
 		</footer>	</div> <!-- #about -->		<script>
 			"use strict";
-						
+						alert( device.platform ); // debug FIXME
+				console.log( device );			
 			$(document).bind("mobileinit", function() {
 				// Make your jQuery Mobile framework configuration changes here!
 				$.mobile.allowCrossDomainPages = true;
@@ -334,6 +335,7 @@ NOTE: css must be referenced relative as done here for Phonegap Build.
 			});
 
 			if ( app.build != 'app' ) { <!-- 'app' or 'web' -->
+			console.log( 'setting cookie' );
 				setTimeout(function(){setCookie('ss_mobile_theme','true',90);},3500);
 			}
 
@@ -366,7 +368,6 @@ NOTE: css must be referenced relative as done here for Phonegap Build.
 					$('.content').css('opacity','.5');
 					app.contactsStarted = true;
 			}); });
-			alert( device.platform ); // debug FIXME
 		</script>
 		<script src="http://maps.google.com/maps/api/js?v=3&sensor=true"></script>
 		<script defer async src="includes/cookies.min.js"></script>
