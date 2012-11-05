@@ -318,6 +318,11 @@ NOTE: css must be referenced relative as done here for Phonegap Build.
 				$.mobile.allowCrossDomainPages = true;
 				$.support.cors = true;
 				$.mobile.phonegapNavigationEnabled = true;
+/// FIXME DEBUG
+					var _device = device.platform;
+					$("#stats").html( _device );
+					alert('Loaded 2! ' + _device );
+
 			 });
 			$(document).bind('pagebeforeshow',function(){
 				// hide the home button on home screen
@@ -384,10 +389,6 @@ NOTE: css must be referenced relative as done here for Phonegap Build.
 		<script src="includes/cookies.min.js"></script>
 	<div id="stats"></div>
 <script>		
-alert('loading 2 ...');
-	var _device = device.platform;
-	$("#stats").html( _device );
-	alert('Loaded 2! ' + _device );
 /*
 	console.log( 'Loaded 2' ) 
 */
