@@ -124,11 +124,12 @@ NOTE: css must be referenced relative as done here for Phonegap Build.
 				</label>
 			</div>
 		</footer>	<script>
-		
+		/*
 		$("#contacts").on('pagebeforeshow', function() { // testing
 			$('body').removeClass('ui-loading');
 			$('.content').css('opacity','1');
 		});
+		*/
 	
 	</script>
 	</div> <!-- #contacts-content -->	<div id="locations" data-role="page" class="page">
@@ -308,7 +309,8 @@ NOTE: css must be referenced relative as done here for Phonegap Build.
 					</select> 
 				</label>
 			</div>
-		</footer>	</div> <!-- #about -->		<script>
+		</footer>	</div> <!-- #about -->		
+		<script>
 			"use strict";
 			$(document).bind("mobileinit", function() {
 				// Make your jQuery Mobile framework configuration changes here!
@@ -368,6 +370,7 @@ alert('isOnline');
 	}
 
 			// this screen can take a REALLY long time to load on slower devices. Provide some UI stuff for slow users.
+			/*
 			app.contactsStarted = false;
 			$(document).bind('pagecreate', function () {
 				$("a[href=#contacts]").on('click', function() {
@@ -377,6 +380,7 @@ alert('isOnline');
 					$('.content').css('opacity','.5');
 					app.contactsStarted = true;
 			}); });
+			*/
 		</script>
 		<script src="http://maps.google.com/maps/api/js?v=3&sensor=true"></script>
 		<script src="includes/cookies.min.js"></script>
