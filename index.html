@@ -294,7 +294,7 @@ NOTE: css must be referenced relative as done here for Phonegap Build.
 			$("#subnavSingle").remove(); //
 			$("#about-content a").click( function() {
 				$("body").html("");
-				eraseCookie( 'ss_mobile_theme' );
+			//	eraseCookie( 'ss_mobile_theme' );
 			});
 			
 			</script>
@@ -325,7 +325,7 @@ NOTE: css must be referenced relative as done here for Phonegap Build.
 			$(document).bind('pageshow', function() {
 				$(".ui-slider-switch").on('change', function() {
 					if (app.slider>0) return;
-					eraseCookie('ss_mobile_theme');
+//					eraseCookie('ss_mobile_theme');
 					setTimeout( function() {
 //						$("body").html("");
 						$(".ui-slider-switch").val("on");  //reset
@@ -379,7 +379,7 @@ alert('isOnline');
 			}); });
 		</script>
 		<script src="http://maps.google.com/maps/api/js?v=3&sensor=true"></script>
-		<script defer async src="includes/cookies.min.js"></script>
+		<script src="includes/cookies.min.js"></script>
 	<div id="stats"></div>
 <script>		
 alert('loading ..');
