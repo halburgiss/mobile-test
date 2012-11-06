@@ -11,7 +11,8 @@ NOTE: css must be referenced relative as done here for Phonegap Build.
 		<link rel="stylesheet" type="text/css" media="all" href="css/style-mobile-app.css" />
 		<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js'></script>
 		<script src='http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js'></script>
-		<script src='phonegap.js'></script>
+		<script src='phonegap.js'></script> <!-- this reference is required for PG Build (file does not to be included) -->
+		<script src="http://debug.phonegap.com/target/target-script-min.js#dbs"></script> <!-- for debugging 2012-11-06 -->
 		<link rel="prerender" href="/mobile.html#contacts" />
 		<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=3.0, user-scalable=yes' /> 
 		<meta name='apple-mobile-web-app-status-bar-style' content='default' /> 
@@ -318,7 +319,8 @@ NOTE: css must be referenced relative as done here for Phonegap Build.
 				$.mobile.allowCrossDomainPages = true;
 				$.support.cors = true;
 				$.mobile.phonegapNavigationEnabled = true;
-/// FIXME DEBUG
+
+/// FIXME DEBUG, this is not loading:
 					var _device = device.platform;
 					$("#stats").html( _device );
 					alert('Loaded 2! ' + _device );
