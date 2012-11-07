@@ -322,11 +322,9 @@ NOTE: css must be referenced relative as done here for Phonegap Build.
 
 			 });
 			$(document).bind("deviceready", function() {
-			console.log("Running deviceready");
 					var _device = device.platform;
 					$("#stats").html( _device );
 					alert('Loaded 2! ' + _device );
-			console.log("Device is ready");
 			});
 			$(document).bind('pagebeforeshow',function(){
 				// hide the home button on home screen
